@@ -1,0 +1,82 @@
+.product {
+  display: flex;
+  gap: 2rem;
+  align-items: end;
+  padding: 1.6rem 2rem 1.6rem 4rem;
+  background-color: #fff;
+  justify-content: space-around;
+
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+
+  transition: all 0.3s;
+
+  /* box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px; */
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+}
+
+.product:hover {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+
+  transform: scale(1.006) translateY(-8px);
+}
+
+.product:nth-child(3) {
+  align-self: end;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 0.4rem;
+}
+
+img {
+  display: inline-block;
+  width: fit-content;
+  height: 100px;
+}
+
+h2 {
+  font-size: 1.7rem;
+  color: #3f3f46;
+}
+
+.description span {
+  font-size: 1.4rem;
+  color: #71717a;
+}
+
+.rating {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #52525b;
+}
+
+.rating span {
+  color: #a1a1aa;
+}
+
+.price {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #52525b;
+}
+
+.bookmark {
+  height: 2.2rem;
+  font-size: 1rem;
+  fill: #22c55e;
+  flex-shrink: 0;
+  align-self: start;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.bookmark:hover {
+  filter: drop-shadow(rgba(0, 0, 0, 0.15) 2.6px 1.95px 1.95px);
+  transform: scale(0.95);
+}

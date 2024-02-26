@@ -1,0 +1,48 @@
+.cartItem {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #e4e4e7;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin-right: 10rem;
+}
+.Dev {
+  display: flex;
+  gap: 2rem;
+  margin-left: auto;
+  align-items: center;
+}
+.totalPrice {
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+.btnDel {
+  background-color: #22c55e;
+  padding: 1.2rem 2rem;
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: #444;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 100px;
+  text-align: center;
+  transition: all 0.3s;
+  cursor: pointer;
+  border: none;
+  align-self: center;
+  justify-content: center;
+  height: 100%;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.btnDel:hover {
+  background-color: #4ade80;
+}

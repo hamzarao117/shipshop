@@ -1,0 +1,10 @@
+.products {
+  margin: 6rem 10rem;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+}

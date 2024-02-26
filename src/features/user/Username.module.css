@@ -1,0 +1,8 @@
+.username {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #171717;
+  border: 2px solid #171717;
+  padding: 0.4rem 1.2rem;
+  border-radius: 100px;
+}

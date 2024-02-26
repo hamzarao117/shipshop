@@ -1,0 +1,81 @@
+.cart {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 3rem;
+  margin: 6rem 0;
+  width: 60%;
+}
+
+.heading {
+  align-self: start;
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+
+.totalPrice {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.backBtn,
+.btnOrder,
+.btnClear {
+  display: inline-block;
+  align-self: start;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 600;
+
+  background-color: transparent;
+
+  border-radius: 100px;
+  padding: 1.2rem 2.2rem;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.backBtn {
+  border: 1px solid #22c55e;
+  color: #22c55e;
+}
+
+.backBtn:hover {
+  color: #fff;
+  background-color: #22c55e;
+}
+
+.btnOrder {
+  text-transform: uppercase;
+  background-color: #22c55e;
+  border: 1px solid #22c55e;
+  color: #444;
+}
+
+.btnOrder:hover {
+  background-color: #4ade80;
+  border: 1px solid #4ade80;
+}
+
+.btnClear {
+  border: 1px solid #d4d4d8;
+  text-transform: uppercase;
+  color: #d4d4d8;
+}
+.btnClear:hover {
+  color: #444;
+  background-color: #d4d4d8;
+}
+
+.cartBtns {
+  display: flex;
+  gap: 1rem;
+}
+
+.cartList {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

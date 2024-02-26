@@ -1,0 +1,35 @@
+.emptyCart {
+  margin: 6rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.backBtn {
+  display: inline-block;
+  align-self: start;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 600;
+
+  background-color: transparent;
+
+  border-radius: 100px;
+  padding: 1.2rem 2.2rem;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.backBtn {
+  border: 1px solid #22c55e;
+  color: #22c55e;
+}
+
+.backBtn:hover {
+  color: #fff;
+  background-color: #22c55e;
+}
+
+.heading {
+  font-size: 2.4rem;
+}

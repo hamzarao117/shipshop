@@ -1,0 +1,44 @@
+.btnDel {
+  padding: 1.2rem 2rem;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+.btnDel,
+.btnQuan {
+  background-color: #22c55e;
+  text-decoration: none;
+  color: #444;
+  font-weight: 600;
+  border-radius: 100px;
+  text-align: center;
+  transition: all 0.3s;
+  cursor: pointer;
+  border: none;
+  align-self: center;
+  justify-content: center;
+  height: 100%;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.btnQuan {
+  font-size: 1.4rem;
+  padding: 0.8rem 1.2rem;
+}
+
+.btnDel:hover,
+.btnQuan:hover {
+  background-color: #4ade80;
+}
+
+.btnsQuan {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.currentQuantity {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
