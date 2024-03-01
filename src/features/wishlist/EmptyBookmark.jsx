@@ -1,15 +1,15 @@
-import styles from "../cart/EmptyCart.module.css";
 import { Link } from "react-router-dom";
+import styles from "../cart/Empty.module.css";
 
 function EmptyBookmark() {
   return (
     <div>
-      <div className={styles.emptyCart}>
-        <Link className={styles.backBtn} to="/products">
+      <div className={styles.empty}>
+        <Link className="backBtn" to="/products">
           Back &larr;
         </Link>
 
-        <p className={styles.heading}>
+        <p className="headingEmptyComponent">
           Your List is still empty. Start adding some items :)
         </p>
       </div>

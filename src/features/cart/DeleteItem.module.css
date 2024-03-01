@@ -1,11 +1,6 @@
-.btnDel {
-  padding: 1.2rem 2rem;
-  font-size: 1.1rem;
-  text-transform: uppercase;
-}
-
 .btnDel,
-.btnQuan {
+.btnQuan,
+.btnQuanColView {
   background-color: #22c55e;
   text-decoration: none;
   color: #444;
@@ -17,28 +12,35 @@
   border: none;
   align-self: center;
   justify-content: center;
-  height: 100%;
   margin-left: auto;
   flex-shrink: 0;
 }
 
-.btnQuan {
-  font-size: 1.4rem;
-  padding: 0.8rem 1.2rem;
+.btnDel {
+  padding: 1.2rem 2rem;
+  font-size: 1.1rem;
+  text-transform: uppercase;
 }
 
 .btnDel:hover,
-.btnQuan:hover {
+.btnQuan:hover,
+.btnQuanColView:hover {
   background-color: #4ade80;
 }
 
 .btnsQuan {
   display: flex;
   align-items: center;
+  align-self: end;
   gap: 0.8rem;
 }
 
 .currentQuantity {
   font-size: 1.4rem;
   font-weight: 500;
+}
+
+.btnQuanColView {
+  padding: 1rem 1.4rem;
+  align-self: end;
 }

@@ -17,10 +17,9 @@ export async function getProductDetails(id) {
   return data;
 }
 
-export async function getOrder(id) {
-  const res = await fetch(`${API_URL}/order/${id}`);
-  if (!res.ok) throw Error(`Couldn't find order #${id}`);
-
+export async function getCategory(category) {
+  const res = await fetch(`${API_URL}/category/${category}`);
+  if (!res.ok) throw Error();
   const { data } = await res.json();
   return data;
 }

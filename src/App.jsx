@@ -25,15 +25,14 @@ const router = createBrowserRouter([
         loader: productsLoader,
         errorElement: <Error />,
       },
-      { path: "/cart", element: <Cart /> },
-      { path: "/bookmark", element: <Bookmark /> },
-
       {
         path: "/products/:productId",
         element: <ProductDetails />,
         loader: detailLoader,
         errorElement: <Error />,
       },
+      { path: "/cart", element: <Cart /> },
+      { path: "/bookmark", element: <Bookmark /> },
     ],
   },
 ]);

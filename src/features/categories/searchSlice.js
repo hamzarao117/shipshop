@@ -2,9 +2,10 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   search: "",
+  category: "",
 };
 
-const userSlice = createSlice({
+const searchSlice = createSlice({
   name: "search",
   initialState,
   reducers: {
@@ -13,9 +14,12 @@ const userSlice = createSlice({
         item.toLowerCase().includes(item)
       );
     },
+    searchCategory(state, action) {
+      state.category = action.payload;
+    },
   },
 });
 
-export const { searchFilter } = userSlice.actions;
+export const { searchFilter, searchCategory } = searchSlice.actions;
 
-export default userSlice.reducer;
+export default searchSlice.reducer;

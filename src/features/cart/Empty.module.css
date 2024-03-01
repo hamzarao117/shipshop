@@ -1,0 +1,10 @@
+.empty {
+  margin: 6rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+:global(.headingEmptyComponent) {
+  font-size: 2.4rem;
+}

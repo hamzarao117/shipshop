@@ -12,11 +12,21 @@ const bookmarkSlice = createSlice({
       state.bookmarkList.push(action.payload);
     },
     deleteBookmark(state, action) {
-      state.cart = state.cart.filter((item) => item.id !== action.payload);
+      state.bookmarkList = state.bookmarkList.filter(
+        (item) => item.id !== action.payload
+      );
+    },
+    clearBookmark(state) {
+      alert("Do you want to delete your List?");
+      state.bookmarkList = [];
     },
   },
 });
 
-export const { addBookmark, deleteBookmark } = bookmarkSlice.actions;
+export const { addBookmark, deleteBookmark, clearBookmark } =
+  bookmarkSlice.actions;
 
 export default bookmarkSlice.reducer;
+
+export const getCurrentBookmarkQuantitybyId = (id) => (state) =>
+  state.bookmark.bookmarkList.find((item) => item.id === id)?.bookmark ?? false;

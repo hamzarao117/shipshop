@@ -1,0 +1,76 @@
+.container {
+  margin: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: start;
+  align-self: start;
+  margin-left: 18rem;
+  gap: 2rem;
+}
+
+.heading {
+  font-size: 3rem;
+  margin-bottom: 0;
+}
+
+.emptydiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: start;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.btnClear {
+  font-size: 1.6rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: #fff;
+  background-color: #ef4444;
+  padding: 1rem 2.2rem;
+  border-radius: 2px;
+  align-self: start;
+  text-transform: uppercase;
+  position: absolute;
+  top: 8px;
+  right: 13%;
+}
+
+.btnClear:hover {
+  background-color: #dc2626;
+}
+
+.list {
+  margin: 3rem 10rem;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.column {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: start;
+  gap: 3rem;
+  margin: 3rem 10rem;
+  width: 100%;
+  list-style: none;
+}
