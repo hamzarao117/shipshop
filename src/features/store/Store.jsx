@@ -7,10 +7,11 @@ import styles from "./Store.module.css";
 function Store() {
   const view = useSelector((state) => state.view.view);
   const category = useSelector((state) => state.search.category);
+
   const store = useLoaderData();
   1;
-  const data = store.filter((x) => x.category === category) || "";
-  console.log(data);
+
+  const data = store.filter((x) => x.category === category);
 
   return (
     <ul className={view ? styles.list : styles.column}>

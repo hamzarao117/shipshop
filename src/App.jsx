@@ -8,6 +8,7 @@ import ProductDetails, {
 } from "./features/store/ProductDetails";
 import Cart from "./features/cart/Cart";
 import Bookmark from "./features/wishlist/Bookmark";
+import Checkout from "./features/checkout/Checkout";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,9 @@ const router = createBrowserRouter([
         errorElement: <Error />,
       },
       { path: "/cart", element: <Cart /> },
+
+      { path: "/checkout", element: <Checkout />, errorElement: <Error /> },
+      { path: "/myorder", element: <Checkout />, errorElement: <Error /> },
       { path: "/bookmark", element: <Bookmark /> },
     ],
   },

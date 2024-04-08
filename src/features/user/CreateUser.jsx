@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Button from "../../ui/Button";
 import styles from "./CreateUser.module.css";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { updateName } from "./userSlice";
 
@@ -9,6 +9,7 @@ function CreateUser() {
   const [email, setEmail] = useState("hamza@example.com");
   const [password, setPassword] = useState("qwerty");
   const [username, setUsername] = useState("");
+  const darkTheme = useSelector((state) => state.view.darkTheme);
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -22,13 +23,23 @@ function CreateUser() {
 
   return (
     <>
-      <p>👋 Welcome! Please start by telling us your name:</p>
-      <form className={styles.form} onSubmit={handleSubmit}>
+      <p className={darkTheme ? styles.darkHeading : styles.heading}>
+        👋 Welcome! Please start by telling us your name:
+      </p>
+      <form
+        className={darkTheme ? styles.darkForm : styles.form}
+        onSubmit={handleSubmit}
+      >
         <div className={styles.row}>
-          <label htmlFor="name">Name</label>
+          <label
+            htmlFor="name"
+            className={darkTheme ? styles.darkLabel : styles.label}
+          >
+            Name
+          </label>
 
           <input
-            className={styles.input}
+            className={darkTheme ? styles.darkInput : styles.input}
             type="text"
             id="name"
             placeholder="Your full name"
@@ -39,9 +50,14 @@ function CreateUser() {
         </div>
 
         <div className={styles.row}>
-          <label htmlFor="email">Email address</label>
+          <label
+            htmlFor="email"
+            className={darkTheme ? styles.darkLabel : styles.label}
+          >
+            Email address
+          </label>
           <input
-            className={styles.input}
+            className={darkTheme ? styles.darkInput : styles.input}
             type="email"
             id="email"
             onChange={(e) => setEmail(e.target.value)}
@@ -50,9 +66,14 @@ function CreateUser() {
         </div>
 
         <div className={styles.row}>
-          <label htmlFor="password">Password</label>
+          <label
+            htmlFor="password"
+            className={darkTheme ? styles.darkLabel : styles.label}
+          >
+            Password
+          </label>
           <input
-            className={styles.input}
+            className={darkTheme ? styles.darkInput : styles.input}
             type="password"
             id="password"
             onChange={(e) => setPassword(e.target.value)}

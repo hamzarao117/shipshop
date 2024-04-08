@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   search: "",
-  category: "",
+  category: "men's clothing",
 };
 
 const searchSlice = createSlice({

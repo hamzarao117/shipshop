@@ -1,17 +1,27 @@
 .listViewBtn,
-.listViewBtn2 {
+.darkListViewBtn,
+.listViewBtn2,
+.darkListViewBtn2 {
   height: 2.2rem;
   fill: #171717;
   cursor: pointer;
   transition: all 0.3s;
 }
 
-.listViewBtn2 {
+.darkListViewBtn,
+.darkListViewBtn2 {
+  fill: #e1e1e1;
+}
+
+.listViewBtn2,
+.darkListViewBtn2 {
   height: 2.6rem;
 }
 
 .listViewBtn:hover,
-.listViewBtn2:hover {
+.listViewBtn2:hover,
+.darkListViewBtn:hover,
+.darkListViewBtn2:hover {
   transform: scale(1.15);
   filter: drop-shadow(
     rgba(5, 46, 22, 0.25) 0px 13px 27px -5px,

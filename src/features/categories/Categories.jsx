@@ -6,10 +6,11 @@ import { searchCategory } from "./searchSlice";
 function Categories() {
   const dispatch = useDispatch();
   const category = useSelector((state) => state.search.category);
+  const darkTheme = useSelector((state) => state.view.darkTheme);
 
   return (
     <select
-      className={styles.selectContainer}
+      className={darkTheme ? styles.darkSelectContainer : styles.selectContainer}
       value={category}
       onChange={(e) => {
         dispatch(searchCategory(e.target.value));

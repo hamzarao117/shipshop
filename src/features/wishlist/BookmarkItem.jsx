@@ -15,6 +15,7 @@ function BookmarkItem({ item }) {
   const [isExpanded, setIsExpanded] = useState(false);
   const dispatch = useDispatch();
   const currentQuantity = useSelector(getCurrentQuantityById(id));
+  const darkTheme = useSelector((state) => state.view.darkTheme);
   const view = useSelector((state) => state.view.view);
   const isInCart = currentQuantity > 0;
   const navigate = useNavigate();
@@ -40,6 +41,7 @@ function BookmarkItem({ item }) {
   }
 
   const btnColor = isExpanded ? "#ef4444" : "#22c55e";
+  const darkBtnColor = isExpanded ? "#f58f8f" : "#7adc9e";
 
   const Styles = {
     border: "none",
@@ -47,17 +49,23 @@ function BookmarkItem({ item }) {
     fontSize: "14px",
     cursor: "pointer",
     paddingLeft: "3px",
-    color: btnColor,
+    color: darkTheme ? darkBtnColor : btnColor,
   };
 
   if (!view)
     return (
-      <li className={styles.productCol}>
-        <Link className={styles.imgLink} onClick={getDetails}>
+      <li className={darkTheme ? styles.darkProductCol : styles.productCol}>
+        <Link
+          className={darkTheme ? styles.darkImgLink : styles.imgLink}
+          onClick={getDetails}
+        >
           <img src={image} alt={title} width="100px" />
         </Link>
         <div className={styles.colDetails}>
-          <Link className={styles.headingLink} onClick={getDetails}>
+          <Link
+            className={darkTheme ? styles.darkHeadingLink : styles.headingLink}
+            onClick={getDetails}
+          >
             {title.split(" ").slice(0, 3).join(" ") + "..."}
           </Link>
           <p className={styles.description}>
@@ -69,10 +77,16 @@ function BookmarkItem({ item }) {
         </div>
         <div className={styles.lowerDiv}>
           <div>
-            <p className={styles.rating}>
+            <p className={darkTheme ? styles.darkRating : styles.rating}>
               {rating.rate}⭐ <span>({rating.count})</span>
             </p>
-            <p className={styles.colViewPrice}>${price}</p>
+            <p
+              className={
+                darkTheme ? styles.darkColViewPrice : styles.colViewPrice
+              }
+            >
+              ${price}
+            </p>
           </div>
 
           {!isInCart ? (
@@ -90,7 +104,9 @@ function BookmarkItem({ item }) {
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 384 512"
-          className={styles.colViewBookmark}
+          className={
+            darkTheme ? styles.darkColViewBookmark : styles.colViewBookmark
+          }
           onClick={() => dispatch(deleteBookmark(id))}
         >
           <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z" />
@@ -99,12 +115,18 @@ function BookmarkItem({ item }) {
     );
 
   return (
-    <li className={styles.productList}>
-      <Link className={styles.imgLink} onClick={getDetails}>
+    <li className={darkTheme ? styles.darkProductList : styles.productList}>
+      <Link
+        className={darkTheme ? styles.darkImgLink : styles.imgLink}
+        onClick={getDetails}
+      >
         <img src={image} alt={title} width="100px" />
       </Link>
       <div className={styles.details}>
-        <Link className={styles.headingLink} onClick={getDetails}>
+        <Link
+          className={darkTheme ? styles.darkHeadingLink : styles.headingLink}
+          onClick={getDetails}
+        >
           {title}
         </Link>
         <p className={styles.description}>
@@ -117,10 +139,10 @@ function BookmarkItem({ item }) {
             {isExpanded ? "show less" : "show more"}
           </button>
         </p>
-        <p className={styles.rating}>
+        <p className={darkTheme ? styles.darkRating : styles.rating}>
           {rating.rate}⭐ <span>( {rating.count} )</span>
         </p>
-        <p className={styles.price}>${price}</p>
+        <p className={darkTheme ? styles.darkPrice : styles.price}>${price}</p>
       </div>
 
       {!isInCart ? (
@@ -132,7 +154,7 @@ function BookmarkItem({ item }) {
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 384 512"
-        className={styles.bookmark}
+        className={darkTheme ? styles.darkBookmark : styles.bookmark}
         onClick={handleDelBookmark}
       >
         <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z" />

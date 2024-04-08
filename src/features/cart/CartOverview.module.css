@@ -2,10 +2,15 @@
   position: relative;
 }
 
-.cartLink {
+.cartLink,
+.darkCartLink {
   height: 2.4rem;
   fill: #171717;
   transition: all 0.2s;
+}
+
+.darkCartLink {
+  fill: #e1e1e1;
 }
 
 .cartLink:hover {
@@ -16,7 +21,16 @@
   );
 }
 
-.cartListQuantity {
+.darkCartLink:hover {
+  transform: scale(1.15);
+  filter: drop-shadow(
+    rgba(225, 225, 225, 0.25) 0px 13px 27px -5px,
+    rgba(225, 225, 225, 0.3) 0px 8px 16px -8px
+  );
+}
+
+.cartListQuantity,
+.darkCartListQuantity {
   position: absolute;
   top: -8px;
   right: -6px;
@@ -25,4 +39,9 @@
   background-color: #fff;
   padding: 0.2rem 0.6rem;
   border-radius: 100px;
+}
+
+.darkCartListQuantity {
+  background-color: #f0f0f0;
+  color: #202830;
 }

@@ -5,9 +5,10 @@ import CreateUser from "../features/user/CreateUser";
 
 function Home() {
   const username = useSelector((state) => state.user.username);
+  const darkTheme = useSelector((state) => state.view.darkTheme);
 
   return (
-    <div className={styles.homeHeading}>
+    <div className={darkTheme ? styles.darkHomeHeading : styles.homeHeading}>
       <h1>
         The best store.
         <br />

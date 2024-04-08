@@ -1,6 +1,8 @@
 .btnDel,
+.darkBtnDel,
 .btnQuan,
 .btnQuanColView {
+  display: flex;
   background-color: #22c55e;
   text-decoration: none;
   color: #444;
@@ -10,16 +12,29 @@
   transition: all 0.3s;
   cursor: pointer;
   border: none;
-  align-self: center;
+  align-self: end;
   justify-content: center;
   margin-left: auto;
   flex-shrink: 0;
 }
 
-.btnDel {
+.darkBtnsQuan:hover {
+  background-color: #4ade80;
+}
+
+.btnDel,
+.darkBtnDel {
   padding: 1.2rem 2rem;
   font-size: 1.1rem;
   text-transform: uppercase;
+}
+
+.darkBtnDel {
+  background-color: #7adc9e;
+}
+
+.darkBtnDel:hover {
+  background-color: #64d68e;
 }
 
 .btnDel:hover,
@@ -35,9 +50,14 @@
   gap: 0.8rem;
 }
 
-.currentQuantity {
+.currentQuantity,
+.darkCurrentQuantity {
   font-size: 1.4rem;
   font-weight: 500;
+}
+
+.darkCurrentQuantity {
+  color: #e1e1e1;
 }
 
 .btnQuanColView {

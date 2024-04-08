@@ -1,8 +1,14 @@
-p {
+.heading,
+.darkHeading {
   font-size: 2rem;
 }
 
-.form {
+.darkHeading {
+  color: #e1e1e1;
+}
+
+.form,
+.darkForm {
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -15,11 +21,22 @@ p {
     rgba(34, 197, 94, 0.2) 0px 8px 24px, rgba(34, 197, 94, 0.2) 0px 16px 56px;
 }
 
-label {
+.darkForm {
+  background-color: #1f1f1f;
+  box-shadow: rgba(31, 31, 31, 0.2) 0px 4px 16px,
+    rgba(31, 31, 31, 0.2) 0px 8px 24px, rgba(31, 31, 31, 0.2) 0px 16px 56px;
+}
+
+.label,
+.darkLabel {
   font-size: 1.6rem;
   letter-spacing: 1px;
   color: #fff;
   font-weight: 500;
+}
+
+.darkLabel {
+  color: #e1e1e1;
 }
 
 .row {
@@ -29,7 +46,8 @@ label {
   gap: 0.8rem;
 }
 
-.input {
+.input,
+.darkInput {
   font-size: 1.6rem;
   font-family: inherit;
   font-weight: 500;
@@ -42,6 +60,10 @@ label {
   transition: all 0.2s;
 }
 
+.darkInput {
+  color: #202830;
+}
+
 .input::placeholder {
   color: #a1a1aa;
 }
@@ -49,4 +71,8 @@ label {
 .input:focus {
   outline: 3px solid #14532d;
   background-color: #fff;
+}
+.darkInput:focus {
+  outline: 3px solid #202830;
+  background-color: #f0f0f0;
 }

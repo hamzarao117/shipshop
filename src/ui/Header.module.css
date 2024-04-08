@@ -1,12 +1,22 @@
-.header {
+.header,
+.darkHeader {
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: #22c55e;
+
   padding: 1.6rem 3.2rem;
 }
 
-.logo {
+.darkHeader {
+  background-color: #1f1f1f;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.logo,
+.darkLogo {
   color: #444;
   font-size: 2rem;
   font-weight: 400;
@@ -16,16 +26,25 @@
   letter-spacing: 5px;
 }
 
+.darkLogo {
+  color: #e1e1e1;
+}
+
 .headerDiv {
   display: flex;
   align-items: center;
   gap: 1.2rem;
 }
 
-.bookmarkList {
+.bookmarkList,
+.darkBookmarkList {
   height: 2.4rem;
   fill: #171717;
   transition: all 0.2s;
+}
+
+.darkBookmarkList {
+  fill: #e1e1e1;
 }
 
 .bookmarkList:hover {
@@ -33,6 +52,14 @@
   filter: drop-shadow(
     rgba(5, 46, 22, 0.25) 0px 13px 27px -5px,
     rgba(5, 46, 22, 0.3) 0px 8px 16px -8px
+  );
+}
+
+.darkBookmarkList:hover {
+  transform: scale(1.15);
+  filter: drop-shadow(
+    rgba(225, 225, 225, 0.25) 0px 13px 27px -5px,
+    rgba(225, 225, 225, 0.3) 0px 8px 16px -8px
   );
 }
 

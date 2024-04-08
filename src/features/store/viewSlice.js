@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   view: true,
+  darkTheme: false,
 };
 
 const viewSlice = createSlice({
@@ -11,12 +12,13 @@ const viewSlice = createSlice({
     columnView(state, action) {
       state.view = action.payload;
     },
-    listView(state, action) {
-      state.view = action.payload;
+
+    darkThemeActive(state, action) {
+      state.darkTheme = action.payload;
     },
   },
 });
 
-export const { columnView, listView } = viewSlice.actions;
+export const { columnView, darkThemeActive } = viewSlice.actions;
 
 export default viewSlice.reducer;

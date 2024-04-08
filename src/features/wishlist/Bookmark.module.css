@@ -19,9 +19,14 @@
   gap: 2rem;
 }
 
-.heading {
+.heading,
+.darkHeading {
   font-size: 3rem;
   margin-bottom: 0;
+}
+
+.darkHeading {
+  color: #e1e1e1;
 }
 
 .emptydiv {
@@ -33,7 +38,8 @@
   width: 100%;
 }
 
-.btnClear {
+.btnClear,
+.darkBtnClear {
   font-size: 1.6rem;
   font-weight: 500;
   cursor: pointer;
@@ -51,6 +57,13 @@
 
 .btnClear:hover {
   background-color: #dc2626;
+}
+
+.darkBtnClear {
+  background-color: #f15757;
+}
+.darkBtnClear:hover {
+  background-color: #ef4444;
 }
 
 .list {

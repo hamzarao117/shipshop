@@ -1,4 +1,5 @@
-.input {
+.input,
+.darkInput {
   font-size: 1.4rem;
   font-family: inherit;
   letter-spacing: 1px;
@@ -12,13 +13,27 @@
   justify-self: center;
 }
 
-.input:focus {
-  background-color: #fff;
-
-  outline: 2px solid #4ade80;
+.darkInput {
+  background-color: #121212;
+  color: #e1e1e1;
 }
 
-.input::-webkit-input-placeholder {
+.input:focus {
+  background-color: #fff;
+  outline: 1px solid #4ade80;
+}
+
+.darkInput:focus {
+  outline: none;
+  color: #e1e1e1;
+  background-color: #2a2a2a;
+}
+
+.input::placeholder {
   color: #d4d4d8;
   font-weight: 500;
+}
+
+.darkInput::placeholder {
+  color: #f0f0f0;
 }
